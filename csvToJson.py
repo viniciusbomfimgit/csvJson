@@ -5,10 +5,12 @@ csvFilePath = "shopping.csv"
 jsonFilePath = "data.js"
 
 
-with open(csvFilePath) as f:
-    reader = csv.DictReader(f)
+with open(csvFilePath) as file:
+    reader = csv.DictReader(file)
     rows = list(reader)
 
 
-with open(jsonFilePath, "w") as f:
-    json.dump(rows, f, indent=5)
+with open(jsonFilePath, "w") as file:
+    json.dump(rows, file, indent=5)
+
+
